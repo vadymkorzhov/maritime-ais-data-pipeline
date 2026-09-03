@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_vessel_positions
+    description: Cleaned vessel position data
+
+    columns:
+      - name: mmsi
+        tests:
+          - not_null
+
+      - name: seen
+        tests:
+          - not_null
+
+      - name: lat
+        tests:
+          - not_null
+
+      - name: lon
+        tests:
+          - not_null

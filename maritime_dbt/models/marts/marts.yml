@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: vessel_daily_metrics
+    description: Daily analytical metrics for each vessel.
+
+    columns:
+      - name: mmsi
+        tests:
+          - not_null
+
+      - name: observation_date
+        tests:
+          - not_null

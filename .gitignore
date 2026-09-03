@@ -1,0 +1,27 @@
+# Secrets
+.env
+
+# PyCharm
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Airflow runtime
+logs/
+config/
+
+# Local datasets
+data/
+
+# dbt generated files
+maritime_dbt/target/
+maritime_dbt/logs/
+maritime_dbt/dbt_packages/
+
+# OS files
+.DS_Store
+Thumbs.db

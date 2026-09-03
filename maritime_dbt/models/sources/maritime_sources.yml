@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: maritime
+    schema: raw
+
+    tables:
+      - name: vessel_positions_raw
