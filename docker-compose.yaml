@@ -55,6 +55,11 @@ x-airflow-common:
     - ${ENV_FILE_PATH:-.env}
   environment:
     &airflow-common-env
+    MARITIME_DB_HOST: ${MARITIME_DB_HOST}
+    MARITIME_DB_PORT: ${MARITIME_DB_PORT}
+    MARITIME_DB_NAME: ${MARITIME_DB_NAME}
+    MARITIME_DB_USER: ${MARITIME_DB_USER}
+    MARITIME_DB_PASSWORD: ${MARITIME_DB_PASSWORD}
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
     AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
@@ -87,6 +92,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/sql:/opt/airflow/sql
     - ${AIRFLOW_PROJ_DIR:-.}/maritime_dbt:/opt/airflow/maritime_dbt
     - ${USERPROFILE}\.dbt:/home/airflow/.dbt
+    - ${USERPROFILE}/.aws:/home/airflow/.aws
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on

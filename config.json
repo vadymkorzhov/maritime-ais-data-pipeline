@@ -1,3 +1,5 @@
 {
-    "url": "https://ais.openwaters.io/v1/vessels"
+    "url": "https://ais.openwaters.io/v1/vessels",
+    "bbox": "50.7,0.5,51.4,2.0",
+    "bucket_name": "maritime-ais-raw-data-949687826388-eu-north-1-an"
 }

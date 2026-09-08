@@ -5,4 +5,5 @@ sog	NUMERIC,
 cog	NUMERIC,
 lat	NUMERIC,
 lon	NUMERIC,
-seen TIMESTAMPTZ);
+seen TIMESTAMPTZ,
+UNIQUE (mmsi,seen));
